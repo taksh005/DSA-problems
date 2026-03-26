@@ -5,7 +5,7 @@ public:
         if(t.size()!=s.size()) return false;
         for(char c : s) hash[c-'a']++;
         for(int i =0;i<s.size();i++){
-            if(hash[t[i]]-- <= 0) return false;
+            if(hash[t[i]-'a']-- <= 0) return false;
         }
         return true;
     }
