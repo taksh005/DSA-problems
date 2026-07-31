@@ -3,10 +3,8 @@ public:
     int minimumPushes(string word) {
         int n = word.length();
         vector<int> freq(26,0);
-        int diff =0 ;
         for(char c : word){
             freq[c - 'a']++;
-            if(freq[c - 'a'] == 1) diff++;
         }
         sort(freq.rbegin(), freq.rend());
         int ans = 0;
